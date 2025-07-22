@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <!-- CRIA O TITULO O INPUT E O BOTÃO -->
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <div class="input-container">
+            <img src="img/icone-tarefas.gif" class="input-icon">
+            <input type="text" class="campoTexto" placeholder="Digite sua tarefa">
+        </div>
+        <button class="botaoAdd">Adicionar <img src="img/icone-adicionar.png" class="icone-adicionar"> </button>
+
+    </header>
+
+    <!-- CRIA O PRINCIPAL COM OS DIFERENTES CAMPOS-->
+    <main id="areaLista">
+        <div class="item">
+
+            <div class="item-icone">
+            <img src="img/icone-aberto.png" class="icone-aberto">
+            </div>
+            <div class="item-nome">
+                Teste de tarefas
+            </div>
+            <div class="item-botao">
+                <button>Deletar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/controle.js"></script>
+</body>
+</html>

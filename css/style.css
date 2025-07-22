@@ -1,0 +1,155 @@
+
+/* FORMATAÇÃO PADRÃOP DO CSS */
+* {
+    box-sizing:border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* FORMATAÇÃO PADRÃOP DO CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #eeeeee;
+}
+
+/* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 90%;
+    margin: auto auto;
+}
+
+input {
+    height: 95px;
+    font-size: 2rem;
+    width: 80%;
+    padding-left: 10%
+}
+
+.botaoAdd {
+    width: 20%;
+    /* AQUI ELE COLOCA O MOUSE DE CLICAR */
+    cursor:pointer;
+    background: green;
+    color:white;
+    /* COLOCA ESTILIZAÇÃO NA FONTE E DEIXA EM NEGRITO */
+    font-weight: bold;
+    border:none;
+    height: 95px;
+    /* DEIXA A BORDA DA DIRENTA DE CIMA E DE BAIXO REDONDAS */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.botaoAdd:hover{
+    background-color:rgb(4, 84, 4);
+    
+}
+
+.icone-adicionar{
+    height:35px;
+}
+ 
+/* CRIEI UMA DIV PARA COLOCAR O GIF DENTRO DO INPUT */
+.input-container{
+    position: relative;
+    width: 80%;
+}
+
+/* CRIEI UMA DIV PARA COLOCAR O GIF DENTRO DO INPUT */
+.input-container input {
+    padding-left: 100px;
+    height: 95px;
+    font-size: 2rem;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    border:none;
+}
+
+/* CRIEI UMA DIV PARA COLOCAR O GIF DENTRO DO INPUT */
+.input-icon{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 35px;
+    pointer-events:none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: gif-animation 1s linear infinite;
+}
+
+@keyframes gif-animation{
+    0% {background-position: 0 0;}
+    100% {background-position: 100% 0;}
+}
+
+/* CONFIGURANDO O CAMPO PRINCIPAL */
+main {
+    /* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
+    display:flex;
+    flex-flow : row wrap;
+    width: 90%;
+    margin: auto auto;
+    border : solid 1px blue;
+    padding-top: 20px;
+    margin-top: 2%;
+}
+
+
+/* CONFIGURA A DIV PRINCIPAL */
+.item{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+}
+
+/* FAZ A SEPARAÇÃO DOS CAMPOS */
+/* CRIA O CAMPO DO ICONE */
+.item-icone{
+    flex: 20%;
+    border: 1px solid orange;
+    /* CENTRALIZA O ICONE */
+    text-align: center;
+    font-size:3rem;
+}
+/* FAZ A SEPARAÇÃO DOS CAMPOS */
+/* CRIA O CAMPO DE TEXTO */
+.item-nome{
+    flex: 55%;
+    border: 1px solid red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+/* FAZ A SEPARAÇÃO DOS CAMPOS */
+/* CRIA O CAMPO DO BOTÃO */
+.item-botao{
+    flex: 25%;
+    border: 1px solid black;
+    text-align: right;
+}
+
+.icone-aberto{
+    width: 25px;
+}
