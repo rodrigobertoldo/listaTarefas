@@ -87,17 +87,12 @@ input {
     left: 30px;
     top: 50%;
     transform: translateY(-50%);
-    height: 35px;
+    height: 30px;
     pointer-events:none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    animation: gif-animation 1s linear infinite;
 }
 
-@keyframes gif-animation{
-    0% {background-position: 0 0;}
-    100% {background-position: 100% 0;}
-}
 
 /* CONFIGURANDO O CAMPO PRINCIPAL */
 main {
@@ -106,7 +101,7 @@ main {
     flex-flow : row wrap;
     width: 90%;
     margin: auto auto;
-    border : solid 1px blue;
+    /*border : solid 1px blue;*/
     padding-top: 20px;
     margin-top: 2%;
 }
@@ -122,13 +117,23 @@ main {
     height: 80px;
     width: 100%;
     box-shadow: 0 0 20px #ccc;
+    margin-bottom: 2%;
+    cursor:pointer;
+}
+
+.item.clicado{
+    background-color: rgb(225, 250, 225);
+}
+
+.item.clicado .item-nome{
+    text-decoration: line-through;
 }
 
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO ICONE */
 .item-icone{
     flex: 20%;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     /* CENTRALIZA O ICONE */
     text-align: center;
     font-size:3rem;
@@ -136,20 +141,49 @@ main {
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DE TEXTO */
 .item-nome{
-    flex: 55%;
-    border: 1px solid red;
+    flex: 65%;
+    /*border: 1px solid red;*/
     font-size: 20px;
     font-weight: bold;
 
 }
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
-/* CRIA O CAMPO DO BOTÃO */
+/* CRIA O CAMPO DO BOTÃO DELETAR */
 .item-botao{
-    flex: 25%;
-    border: 1px solid black;
-    text-align: right;
+    flex: 15%;
+    /*border: 1px solid black;*/
+    text-align: center;
 }
 
 .icone-aberto{
     width: 25px;
 }
+
+.botao-deletar{
+    background: red;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    color:white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-deletar:hover{
+    background: rgb(164, 5, 5);
+}
+
+.icone-deletar{
+    width: 20px;
+}
+
+.clicado {
+    text-decoration: dotted; 
+}
+
