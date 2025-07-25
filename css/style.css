@@ -131,21 +131,29 @@ main {
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO ICONE */
 .item-icone{
-    flex: 20%;
-    /*border: 1px solid orange;*/
+    flex: 10%;
     /* CENTRALIZA O ICONE */
     text-align: center;
     font-size:3rem;
 }
+
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DE TEXTO */
+/* CONFIGURA PARA NAO QUEBRAR A LINHA SE DIGITAR DEMAIS, ESCONDER O QUE DIGITOU E COLOCAR O ... */
 .item-nome{
-    flex: 65%;
+    flex: 75%;
     /*border: 1px solid red;*/
     font-size: 20px;
     font-weight: bold;
+    /* EVITA QUEBRAR A LINHA */
+    white-space:nowrap;
+    /* ESCONDE O QUE ULTRAPASSOU O LIMITE */
+    overflow: hidden;
+    /* DEIXA OS TRÊS PONTINHOS CASO ULTRAPASSE */
+    text-overflow: ellipsis;
 
 }
+
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO BOTÃO DELETAR */
 .item-botao{
@@ -186,7 +194,87 @@ main {
     text-decoration: dotted; 
 }
 
-.botaAdd{
-    font-size: 35px;
+/* FUNCIONA COMO SE FOSSE UM if() DO CSS - 
+   QUANDO A TELA FICAR DESSE TAMANHO AS ESPECIFICAÇÕES FICARAM COM ESTES TAMANHOS */
+
+@media (max-width: 600px){
+
+    .texto-botao{
+        display: none;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .input-container{
+       
+        width: 100%;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .input-container .campoTexto{
+        font-size: 1.1rem;
+        border-radius: 5px;
+        padding-left: 60px;
+        height: 75px;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .input-container .input-icon{
+        height: 20px;
+        left: 18px;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .botaoAdd{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    /* MUDA O LAYOUT PADRÃO QUE FOI ADICIONADO ANTERIORMENTE
+       PARA UM LAYOUT PADRÃO PARA MOBILE */
+    header{
+        
+        flex-direction: column;
+        align-items:stretch;
+        gap: 5px;
+    }
+
+       .texto-deletar{
+        display: none;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .botao-deletar{
+    padding: 15px;
+    flex: 25%;
+    height: 70px;
+    /* DEIXA SÓ AS BORDAS DA DIRETA ARREDONDADADAS */
+    border-radius: 0 5px 5px 0;
+    }
+
+    /*TIRA O TEXTO QUANDO MUDA PARA MOBILE */
+    /* MUDAR AS CONFIGURAÇÕES DO LAYOUT PADRÃO
+    ARRUMA PARA QUE BOTÃO DELETAR FIQUE NA MESMA LINHA DE TAREFAS */
+    .item{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .item-nome{
+    flex: 60%;
+    font-size: 1.1rem;
+    }
+
+    /* ARRUMA OS TAMANHOS */
+    .item-icone{
+    flex: 15%;
+    /* CENTRALIZA O ICONE */
+    text-align: center;
+    font-size:0.5rem;
+    }
+
 }
 
