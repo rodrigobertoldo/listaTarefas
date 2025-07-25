@@ -93,7 +93,6 @@ input {
     border-bottom-right-radius: 10px;
 }
 
-
 /* CONFIGURANDO O CAMPO PRINCIPAL */
 main {
     /* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
@@ -185,5 +184,9 @@ main {
 
 .clicado {
     text-decoration: dotted; 
+}
+
+.botaAdd{
+    font-size: 35px;
 }
 
