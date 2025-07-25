@@ -25,7 +25,8 @@ function addTarefa(){
                 ${valorInput}
             </div>
             <div class="item-botao">
-                <button class="botao-deletar" onclick="deletar(${contador})">Deletar 
+                <button class="botao-deletar" onclick="deletar(${contador})">
+                <span class ="texto-deletar">Deletar</span> 
                 <img src="img/icone-deletar.png" class="icone-deletar"> </button>
             </div>
         </div>`;
