@@ -35,6 +35,24 @@ input {
     padding-left: 10%
 }
 
+footer{
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 400px;
+}
+
+/* CONFIGURANDO O CAMPO PRINCIPAL */
+main {
+    /* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
+    display:flex;
+    flex-flow : row wrap;
+    width: 90%;
+    margin: auto auto;
+    /*border : solid 1px blue;*/
+    padding-top: 20px;
+    margin-top: 2%;
+}
+
 .botaoAdd {
     width: 20%;
     /* AQUI ELE COLOCA O MOUSE DE CLICAR */
@@ -93,19 +111,6 @@ input {
     border-bottom-right-radius: 10px;
 }
 
-/* CONFIGURANDO O CAMPO PRINCIPAL */
-main {
-    /* FORMATAÇÃO PADRÃO DO CSS PARA DEIXAR RENDERIZADO E CENTRALIZADO */
-    display:flex;
-    flex-flow : row wrap;
-    width: 90%;
-    margin: auto auto;
-    /*border : solid 1px blue;*/
-    padding-top: 20px;
-    margin-top: 2%;
-}
-
-
 /* CONFIGURA A DIV PRINCIPAL */
 .item{
     display:flex;
@@ -121,12 +126,13 @@ main {
 }
 
 .item.clicado{
-    background-color: rgb(225, 250, 225);
+    background-color: rgb(242, 245, 29);
 }
 
-.item.clicado .item-nome{
+/* PEGA O .item-nome E MUDA APARENCIA O NOME */
+/*.item.clicado .item-nome{
     text-decoration: line-through;
-}
+}*/
 
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO ICONE */
@@ -190,9 +196,11 @@ main {
     width: 20px;
 }
 
-.clicado {
-    text-decoration: dotted; 
+.item.fechado{
+    background-color: rgb(234, 32, 18);
+    color:white;
 }
+
 
 /* FUNCIONA COMO SE FOSSE UM if() DO CSS - 
    QUANDO A TELA FICAR DESSE TAMANHO AS ESPECIFICAÇÕES FICARAM COM ESTES TAMANHOS */

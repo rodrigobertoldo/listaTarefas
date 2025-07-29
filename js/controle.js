@@ -61,17 +61,27 @@ function marcarTarefa(id){
         // PEGA O id DO ICONE
         var icone = document.getElementById("icone_" + id);
         // ALTERA O CAMINHO DA IMAGEM PARA COLOCAR O ICONE DE FECHADO
+        icone.src = "img/icone-pontos.png";
+
+    } else if(classe == "item clicado"){
+        // SE O ITEM JA ESTIVER CLICADO, FAZ OS PROCESSOS CONTRARIOS PARA DESMARCAR A TAREFA
+        item.classList.add("fechado");
+
+        var icone = document.getElementById("icone_" + id);
         icone.src = "img/icone-fechado.png";
 
         // MÉTODO PARA COLOCAR A TAREFA NO FIM DA LISTA QUANDO CLICADA
         item.parentNode.appendChild(item);
-
-    } else{
+    }
+    else if(classe == "item clicado fechado"){
         // SE O ITEM JA ESTIVER CLICADO, FAZ OS PROCESSOS CONTRARIOS PARA DESMARCAR A TAREFA
         item.classList.remove("clicado");
+        item.classList.remove("fechado");
+        //console.log(item.classList);
 
         var icone = document.getElementById("icone_" + id);
         icone.src = "img/icone-aberto.png";
+
     }
 }
 

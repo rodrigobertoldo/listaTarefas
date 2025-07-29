@@ -14,7 +14,7 @@
         <h1>Lista de Tarefas</h1>
         <div class="input-container">
             <img src="img/icone-tarefas.png" class="input-icon">
-            <input id="campoInput" type="text" class="campoTexto" placeholder="Digite sua tarefa..">
+            <input id="campoInput" type="text" class="campoTexto" placeholder="Digite sua tarefa.." autocomplete="off">
         </div>
         <button onclick="addTarefa()" id="btn-add" class="botaoAdd">
             <span class ="texto-botao">Adicionar</span>
@@ -39,6 +39,11 @@
 
     <!-- CRIA O PRINCIPAL COM OS DIFERENTES CAMPOS-->
     <main id="areaLista"> </main>
+
+    
+    <footer>
+       <p>Ícones por <a href="https://icons8.com" target="_blank">Icons8</a></p>
+    </footer>
 
     <script src="js/controle.js"></script>
 </body>
