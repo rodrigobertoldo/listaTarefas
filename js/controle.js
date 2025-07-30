@@ -74,18 +74,27 @@ function inserirHTML(tarefaObj){
 
     console.log(classeItem);
 
-    let novoItem = `<div class="${classeItem}" id="${tarefaObj.id}">
+    let novoItem = 
+            `<div class="${classeItem}" id="${tarefaObj.id}">
+
             <div class="item-icone" onclick="marcarTarefa(${tarefaObj.id})">
             <img id="icone_${tarefaObj.id}" src="${icone}" class="icone-aberto">
             </div>
+
             <div class="item-nome" onclick="marcarTarefa(${tarefaObj.id})">
                 ${tarefaObj.texto}
             </div>
-            <div class="item-botao">
+
+            <div class="item-editar">
+                <button class="botao-editar" onclick="editar(${tarefaObj.id})">
+                <img src="img/icone-editar.png" class="icone-deletar"> </button>
+            </div>
+
+            <div class="item-deletar">
                 <button class="botao-deletar" onclick="deletar(${tarefaObj.id})">
-                <span class ="texto-deletar">Deletar</span> 
                 <img src="img/icone-deletar.png" class="icone-deletar"> </button>
             </div>
+            
         </div>`;
 
     main.innerHTML += novoItem;

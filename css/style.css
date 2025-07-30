@@ -123,6 +123,7 @@ main {
     box-shadow: 0 0 20px #ccc;
     margin-bottom: 2%;
     cursor:pointer;
+    border-radius: 5px;
 }
 
 .item.clicado{
@@ -137,7 +138,7 @@ main {
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO ICONE */
 .item-icone{
-    flex: 10%;
+    flex: 1%;
     /* CENTRALIZA O ICONE */
     text-align: center;
     font-size:3rem;
@@ -147,7 +148,7 @@ main {
 /* CRIA O CAMPO DE TEXTO */
 /* CONFIGURA PARA NAO QUEBRAR A LINHA SE DIGITAR DEMAIS, ESCONDER O QUE DIGITOU E COLOCAR O ... */
 .item-nome{
-    flex: 75%;
+    flex: 71%;
     /*border: 1px solid red;*/
     font-size: 20px;
     font-weight: bold;
@@ -162,8 +163,14 @@ main {
 
 /* FAZ A SEPARAÇÃO DOS CAMPOS */
 /* CRIA O CAMPO DO BOTÃO DELETAR */
-.item-botao{
-    flex: 15%;
+.item-deletar{
+    flex: 1%;
+    /*border: 1px solid black;*/
+    text-align: center;
+}
+
+.item-editar{
+    flex: 1%;
     /*border: 1px solid black;*/
     text-align: center;
 }
@@ -175,17 +182,36 @@ main {
 .botao-deletar{
     background: red;
     border: none;
-    padding: 15px;
+    padding: 5px;
     width: 100%;
     height: 80px;
     color:white;
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
-    justify-content: space-around;
     align-items: center;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.botao-editar{
+    background: rgb(192, 178, 21);
+    border: none;
+    padding: 5px;
+    width: 100%;
+    height: 80px;
+    color:white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-editar:hover{
+    background: rgb(149, 138, 13);
 }
 
 .botao-deletar:hover{
@@ -207,13 +233,24 @@ main {
 
 @media (max-width: 600px){
 
+    /* MUDA O LAYOUT PADRÃO QUE FOI ADICIONADO ANTERIORMENTE
+       PARA UM LAYOUT PADRÃO PARA MOBILE */
+    header{
+        flex-direction: column;
+        align-items:stretch;
+        gap: 5px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
     .texto-botao{
         display: none;
     }
 
     /* ARRUMA OS TAMANHOS */
     .input-container{
-       
         width: 100%;
     }
 
@@ -222,7 +259,7 @@ main {
         font-size: 1.1rem;
         border-radius: 5px;
         padding-left: 60px;
-        height: 75px;
+        height: 65px;
     }
 
     /* ARRUMA OS TAMANHOS */
@@ -234,30 +271,23 @@ main {
     /* ARRUMA OS TAMANHOS */
     .botaoAdd{
         width: 100%;
-        height: 50px;
+        height: 45px;
         border-radius: 5px;
-    }
-
-    /* MUDA O LAYOUT PADRÃO QUE FOI ADICIONADO ANTERIORMENTE
-       PARA UM LAYOUT PADRÃO PARA MOBILE */
-    header{
-        
-        flex-direction: column;
-        align-items:stretch;
-        gap: 5px;
-    }
-
-       .texto-deletar{
-        display: none;
     }
 
     /* ARRUMA OS TAMANHOS */
     .botao-deletar{
-    padding: 15px;
+    padding: 8px;
     flex: 25%;
     height: 70px;
     /* DEIXA SÓ AS BORDAS DA DIRETA ARREDONDADADAS */
     border-radius: 0 5px 5px 0;
+    }
+
+    .botao-editar{
+    padding: 8px;
+    flex: 25%;
+    height: 70px;
     }
 
     /*TIRA O TEXTO QUANDO MUDA PARA MOBILE */
@@ -273,7 +303,7 @@ main {
     /* ARRUMA OS TAMANHOS */
     .item-nome{
     flex: 60%;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     }
 
     /* ARRUMA OS TAMANHOS */
@@ -281,7 +311,13 @@ main {
     flex: 15%;
     /* CENTRALIZA O ICONE */
     text-align: center;
-    font-size:0.5rem;
+    font-size:0.1rem;
+    }
+
+    .icone-aberto{
+        width: 15px;
+        justify-content: center;
+        align-items: center;
     }
 
 }
