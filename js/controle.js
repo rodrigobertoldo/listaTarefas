@@ -94,8 +94,19 @@ function inserirHTML(tarefaObj){
 
 // FUNÇÃO DELETAR USANDO O INDICE(contador) COMO PARÂMETRO
 function deletar(id){
+
+    // PEGA A TAREFA NO DOM
     var tarefa = document.getElementById(id);
-    tarefa.remove();
+
+    // SE RETORNAR UMA tarefa ELE FAZ A OPERAÇÃO
+    if(tarefa){
+        tarefa.remove();
+    }
+
+    listaTarefas = listaTarefas.filter(tarefa => tarefa.id !== id);
+
+    salvarTarefa();
+    
 }
 
 // FUNÇÃO QUE CONTROLA AS TAREFAS - aberto; em processo; fechada
@@ -163,6 +174,7 @@ input.addEventListener("keyup", function (event){
     }
 })
 
+// MÉTODO PARA SALVAR AS TAREFAS NO LOCALSTORAGE - MUITO IMPORTANTE!!
 function salvarTarefa(){
     localStorage.setItem("tarefaSalva", JSON.stringify(listaTarefas));
 }
